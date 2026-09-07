@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALU Pre-Entry Test 2025 - Important MCQs</title>
+    <style>
+        /* --- Simple and Clean CSS --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            background: #f0f4f9;
+            color: #1e2a3a;
+            padding: 25px 15px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px 35px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-top: 6px solid #1a4b6d;
+        }
+        h1 {
+            font-size: 2.1rem;
+            color: #1a4b6d;
+            text-align: center;
+            letter-spacing: -0.5px;
+            margin-bottom: 2px;
+        }
+        .subhead {
+            text-align: center;
+            color: #4a5f73;
+            border-bottom: 2px solid #e6edf5;
+            padding-bottom: 18px;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        .question-block {
+            background: #fafcff;
+            padding: 18px 22px;
+            margin-bottom: 16px;
+            border-radius: 10px;
+            border-left: 5px solid #3a7ca5;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            transition: background 0.2s ease;
+        }
+        .question-block.correct-highlight {
+            background: #e6f7e9;
+            border-left-color: #1e7e34;
+        }
+        .question-block.wrong-highlight {
+            background: #fde8e8;
+            border-left-color: #b02a37;
+        }
+        .question-text {
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 12px;
+            color: #0b1e2e;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 20px;
+            padding-left: 5px;
+        }
+        .options label {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 8px;
+            background: #f0f5fb;
+            cursor: default;
+            font-size: 0.98rem;
+            width: 100%;
+            border: 1px solid transparent;
+            transition: 0.1s;
+        }
+        .options label.correct-answer {
+            background: #b7e0c4;
+            border-color: #1e7e34;
+            font-weight: 500;
+        }
+        .options label.wrong-answer {
+            background: #f7cdcd;
+            border-color: #b02a37;
+        }
+        .options input[type="radio"] {
+            margin-right: 12px;
+            accent-color: #1a4b6d;
+            transform: scale(1.1);
+            vertical-align: middle;
+            cursor: pointer;
+        }
+        .options label:has(input:disabled) {
+            opacity: 0.9;
+        }
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 17px;
+            background: #1a4b6d;
+            color: white;
+            border: none;
+            border-radius: 60px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 4px 10px rgba(26, 75, 109, 0.25);
+        }
+        .btn-submit:hover {
+            background: #0e3650;
+        }
+        .btn-submit:active {
+            transform: scale(0.97);
+        }
+        #result-area {
+            margin-top: 35px;
+            padding: 22px;
+            background: #dce8f5;
+            border-radius: 14px;
+            text-align: center;
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #0b2a44;
+            border: 2px solid #aec6df;
+            display: none;
+        }
+        #result-area span {
+            color: #0f6b3a;
+        }
+        .footer-note {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 0.85rem;
+            color: #6a7f94;
+        }
+        @media (max-width: 680px) {
+            .container { padding: 18px; }
+            .options { grid-template-columns: 1fr; }
+            .question-block { padding: 14px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>📘 SALU Pre-Entry Test 2025</h1>
+    <div class="subhead">100 Important Practice MCQs • Review answers after submission</div>
+
+    <form id="quizForm">
+        <div id="questions-container"></div>
+        <button type="button" class="btn-submit" id="submitBtn">✅ Submit & Show Answers</button>
+    </form>
+
+    <div id="result-area">
+        🎯 Your Score: <span id="scoreDisplay">0</span> / 100
+        ( <span id="percentDisplay">0%</span> )
+    </div>
+    <div class="footer-note">Correct answers are highlighted in <span style="color:#1e7e34;font-weight:600;">green</span> • Review each question below.</div>
+</div>
+
+<script>
+    // --- 100 MCQs covering English, GK, Math, Science ---
+    const questions = [
+        // ENGLISH (1-25)
+        { q: "Choose the correct synonym of 'Abundant':", options: ["A) Scarce", "B) Plentiful", "C) Empty", "D) Rare"], correct: 1 },
+        { q: "Which word is opposite to 'Cruel'?", options: ["A) Kind", "B) Harsh", "C) Severe", "D) Mean"], correct: 0 },
+        { q: "Identify the correctly spelled word:", options: ["A) Recieve", "B) Receive", "C) Recive", "D) Reiceve"], correct: 1 },
+        { q: "Complete the idiom: 'A blessing in ______.'", options: ["A) sky", "B) disguise", "C) dark", "D) water"], correct: 1 },
+        { q: "What is the plural of 'Cactus'?", options: ["A) Cactuses", "B) Cacti", "C) Cactus", "D) Cactis"], correct: 1 },
+        { q: "Choose the correct article: 'He is ______ honest man.'", options: ["A) a", "B) an", "C) the", "D) no article"], correct: 1 },
+        { q: "Select the correct tense: 'She ______ to school every day.'", options: ["A) go", "B) goes", "C) going", "D) gone"], correct: 1 },
+        { q: "What is the synonym of 'Brave'?", options: ["A) Cowardly", "B) Fearless", "C) Weak", "D) Timid"], correct: 1 },
+        { q: "Antonym of 'Expand':", options: ["A) Shrink", "B) Grow", "C) Increase", "D) Enlarge"], correct: 0 },
+        { q: "Identify the noun in: 'The book is on the table.'", options: ["A) book", "B) on", "C) table", "D) both A & C"], correct: 3 },
+        { q: "Choose correct sentence:", options: ["A) He don't like coffee.", "B) He doesn't like coffee.", "C) He not like coffee.", "D) He do not like coffee."], correct: 1 },
+        { q: "What is the past tense of 'Eat'?", options: ["A) Eated", "B) Ate", "C) Eaten", "D) Eat"], correct: 1 },
+        { q: "Which word is a conjunction?", options: ["A) quickly", "B) because", "C) beautiful", "D) run"], correct: 1 },
+        { q: "Meaning of 'Diligent':", options: ["A) Lazy", "B) Hardworking", "C) Angry", "D) Sad"], correct: 1 },
+        { q: "Choose the correct passive: 'The cat chased the mouse.'", options: ["A) The mouse chased the cat.", "B) The mouse was chased by the cat.", "C) The cat was chased by the mouse.", "D) The mouse is chased by the cat."], correct: 1 },
+        { q: "Which is a proper noun?", options: ["A) city", "B) river", "C) Lahore", "D) mountain"], correct: 2 },
+        { q: "Synonym of 'Quick':", options: ["A) Slow", "B) Fast", "C) Lazy", "D) Steady"], correct: 1 },
+        { q: "Antonym of 'Ancient':", options: ["A) Old", "B) Modern", "C) Antique", "D) Historic"], correct: 1 },
+        { q: "Complete: 'We will leave ______ the morning.'", options: ["A) in", "B) on", "C) at", "D) by"], correct: 0 },
+        { q: "Which is a plural pronoun?", options: ["A) I", "B) he", "C) they", "D) she"], correct: 2 },
+        { q: "Meaning of 'Abandon':", options: ["A) keep", "B) leave behind", "C) hold", "D) cherish"], correct: 1 },
+        { q: "Choose correct spelling:", options: ["A) Accomodate", "B) Acommodate", "C) Accommodate", "D) Accomodate"], correct: 2 },
+        { q: "What is the superlative of 'Good'?", options: ["A) Better", "B) Goodest", "C) Best", "D) Most good"], correct: 2 },
+        { q: "Identify the adjective: 'She wore a red dress.'", options: ["A) wore", "B) red", "C) dress", "D) she"], correct: 1 },
+        { q: "Choose the correct question tag: 'You are coming, ______?'", options: ["A) aren't you", "B) are you", "C) isn't it", "D) won't you"], correct: 0 },
+        // GENERAL KNOWLEDGE & PAKISTAN STUDIES (26-50)
+        { q: "What is the capital of Pakistan?", options: ["A) Lahore", "B) Karachi", "C) Islamabad", "D) Peshawar"], correct: 2 },
+        { q: "Which is the national language of Pakistan?", options: ["A) Punjabi", "B) Sindhi", "C) Urdu", "D) Pashto"], correct: 2 },
+        { q: "Who was the first Governor-General of Pakistan?", options: ["A) Liaquat Ali Khan", "B) Quaid-e-Azam", "C) Khawaja Nazimuddin", "D) Iskandar Mirza"], correct: 1 },
+        { q: "Pakistan came into being on:", options: ["A) 14th August 1946", "B) 14th August 1947", "C) 15th August 1947", "D) 23rd March 1948"], correct: 1 },
+        { q: "What is the total area of Pakistan (approx)?", options: ["A) 700,000 sq km", "B) 881,000 sq km", "C) 1,000,000 sq km", "D) 650,000 sq km"], correct: 1 },
+        { q: "Which river is the longest in Pakistan?", options: ["A) Ravi", "B) Chenab", "C) Indus", "D) Jhelum"], correct: 2 },
+        { q: "What is the currency of Pakistan?", options: ["A) Rupee", "B) Dollar", "C) Taka", "D) Riyal"], correct: 0 },
+        { q: "Who wrote the national anthem of Pakistan?", options: ["A) Allama Iqbal", "B) Hafeez Jalandhari", "C) Faiz Ahmed Faiz", "D) Ahmad Faraz"], correct: 1 },
+        { q: "Which is the largest province of Pakistan by area?", options: ["A) Punjab", "B) Sindh", "C) Khyber Pakhtunkhwa", "D) Balochistan"], correct: 3 },
+        { q: "The highest peak in Pakistan is:", options: ["A) Nanga Parbat", "B) K2", "C) Broad Peak", "D) Gasherbrum"], correct: 1 },
+        { q: "What is the name of Pakistan's largest city?", options: ["A) Karachi", "B) Lahore", "C) Faisalabad", "D) Rawalpindi"], correct: 0 },
+        { q: "Pakistan's first woman Prime Minister was:", options: ["A) Fatima Jinnah", "B) Benazir Bhutto", "C) Hina Rabbani Khar", "D) Sherry Rehman"], correct: 1 },
+        { q: "Which country is on the eastern border of Pakistan?", options: ["A) China", "B) Afghanistan", "C) India", "D) Iran"], correct: 2 },
+        { q: "What is the national flower of Pakistan?", options: ["A) Rose", "B) Jasmine", "C) Sunflower", "D) Tulip"], correct: 1 },
+        { q: "The name 'Pakistan' was coined by:", options: ["A) Quaid-e-Azam", "B) Allama Iqbal", "C) Choudhry Rahmat Ali", "D) Liaquat Ali Khan"], correct: 2 },
+        { q: "Which is the national sport of Pakistan?", options: ["A) Cricket", "B) Hockey", "C) Squash", "D) Football"], correct: 1 },
+        { q: "Pakistan's nuclear tests were conducted in:", options: ["A) 1996", "B) 1998", "C) 2000", "D) 2002"], correct: 1 },
+        { q: "What is the name of the parliament building?", options: ["A) Aiwan-e-Sadr", "B) Supreme Court", "C) Majlis-e-Shoora", "D) Prime Minister House"], correct: 2 },
+        { q: "Which is the largest dam in Pakistan?", options: ["A) Mangla", "B) Tarbela", "C) Warsak", "D) Diamer-Bhasha"], correct: 1 },
+        { q: "The Indus Valley Civilization is in:", options: ["A) South India", "B) Pakistan", "C) Bangladesh", "D) Nepal"], correct: 1 },
+        { q: "Who is the current Chief of Army Staff (as of 2025-26)?", options: ["A) General Bajwa", "B) General Munir", "C) General Sharif", "D) General Kayani"], correct: 1 },
+        { q: "Pakistan's national animal is:", options: ["A) Tiger", "B) Markhor", "C) Lion", "D) Leopard"], correct: 1 },
+        { q: "Which province is known as the 'Land of Five Rivers'?", options: ["A) Sindh", "B) Punjab", "C) KPK", "D) Balochistan"], correct: 1 },
+        { q: "The capital of Sindh is:", options: ["A) Hyderabad", "B) Sukkur", "C) Karachi", "D) Larkana"], correct: 2 },
+        { q: "Pakistan joined the United Nations in:", options: ["A) 1945", "B) 1947", "C) 1948", "D) 1949"], correct: 2 },
+        // MATHEMATICS (51-75)
+        { q: "What is 15% of 200?", options: ["A) 20", "B) 30", "C) 40", "D) 50"], correct: 1 },
+        { q: "Simplify: 4 + 6 × 2 - 3", options: ["A) 13", "B) 11", "C) 17", "D) 14"], correct: 0 },
+        { q: "What is the square root of 144?", options: ["A) 10", "B) 11", "C) 12", "D) 13"], correct: 2 },
+        { q: "If x + 5 = 12, what is x?", options: ["A) 5", "B) 7", "C) 17", "D) 8"], correct: 1 },
+        { q: "What is the area of a rectangle with length 8 and width 5?", options: ["A) 13", "B) 26", "C) 40", "D) 80"], correct: 2 },
+        { q: "What is the next prime number after 7?", options: ["A) 8", "B) 9", "C) 10", "D) 11"], correct: 3 },
+        { q: "Divide 72 by 8:", options: ["A) 8", "B) 9", "C) 10", "D) 11"], correct: 1 },
+        { q: "What is the perimeter of a square with side 6?", options: ["A) 12", "B) 24", "C) 36", "D) 48"], correct: 1 },
+        { q: "Which is the smallest positive integer?", options: ["A) 0", "B) 1", "C) -1", "D) 2"], correct: 1 },
+        { q: "What is 3^4 (3 to the power 4)?", options: ["A) 12", "B) 27", "C) 81", "D) 243"], correct: 2 },
+        { q: "Simplify: 2/3 + 1/6", options: ["A) 1/2", "B) 5/6", "C) 1/3", "D) 2/6"], correct: 1 },
+        { q: "What is the LCM of 6 and 8?", options: ["A) 24", "B) 48", "C) 12", "D) 36"], correct: 0 },
+        { q: "If a triangle has angles 60°, 60°, what is the third angle?", options: ["A) 30°", "B) 45°", "C) 60°", "D) 90°"], correct: 2 },
+        { q: "How many sides does a hexagon have?", options: ["A) 4", "B) 5", "C) 6", "D) 7"], correct: 2 },
+        { q: "What is 25% of 400?", options: ["A) 50", "B) 75", "C) 100", "D) 125"], correct: 2 },
+        { q: "Solve: 10 - (4 + 2)", options: ["A) 8", "B) 6", "C) 4", "D) 12"], correct: 2 },
+        { q: "What is the diameter of a circle with radius 7?", options: ["A) 7", "B) 14", "C) 21", "D) 28"], correct: 1 },
+        { q: "Which number is a multiple of 7?", options: ["A) 27", "B) 35", "C) 45", "D) 48"], correct: 1 },
+        { q: "What is the product of 9 and 6?", options: ["A) 45", "B) 54", "C) 63", "D) 72"], correct: 1 },
+        { q: "If you have ₹500 and spend ₹275, how much is left?", options: ["A) 175", "B) 225", "C) 275", "D) 325"], correct: 1 },
+        { q: "What is the fraction 0.75 as a percentage?", options: ["A) 50%", "B) 75%", "C) 80%", "D) 25%"], correct: 1 },
+        { q: "The perimeter of a triangle with sides 3,4,5 is:", options: ["A) 10", "B) 12", "C) 15", "D) 18"], correct: 1 },
+        { q: "What is 2 + 2 × 2?", options: ["A) 6", "B) 8", "C) 4", "D) 10"], correct: 0 },
+        { q: "The cube of 3 is:", options: ["A) 9", "B) 18", "C) 27", "D) 36"], correct: 2 },
+        { q: "How many zeros are there in one million?", options: ["A) 4", "B) 5", "C) 6", "D) 7"], correct: 2 },
+        // EVERYDAY SCIENCE (76-100)
+        { q: "Which gas is most abundant in the atmosphere?", options: ["A) Oxygen", "B) Carbon Dioxide", "C) Nitrogen", "D) Argon"], correct: 2 },
+        { q: "What is the chemical symbol for Gold?", options: ["A) Go", "B) Gd", "C) Au", "D) Ag"], correct: 2 },
+        { q: "Water boils at 100°C at:", options: ["A) Sea Level", "B) High altitude", "C) Under pressure", "D) In a vacuum"], correct: 0 },
+        { q: "Which organ pumps blood in the human body?", options: ["A) Brain", "B) Liver", "C) Heart", "D) Lungs"], correct: 2 },
+        { q: "The largest planet in our solar system is:", options: ["A) Saturn", "B) Jupiter", "C) Neptune", "D) Uranus"], correct: 1 },
+        { q: "What is the process by which plants make food?", options: ["A) Respiration", "B) Digestion", "C) Photosynthesis", "D) Fermentation"], correct: 2 },
+        { q: "Which is a non-renewable source of energy?", options: ["A) Solar", "B) Wind", "C) Coal", "D) Hydroelectric"], correct: 2 },
+        { q: "What is the smallest unit of life?", options: ["A) Atom", "B) Molecule", "C) Cell", "D) Tissue"], correct: 2 },
+        { q: "The speed of light is approximately:", options: ["A) 3×10^8 m/s", "B) 3×10^6 m/s", "C) 3×10^5 m/s", "D) 3×10^9 m/s"], correct: 0 },
+        { q: "Which disease is caused by a virus?", options: ["A) Diabetes", "B) Malaria", "C) COVID-19", "D) Hypertension"], correct: 2 },
+        { q: "The hardest natural substance is:", options: ["A) Gold", "B) Iron", "C) Diamond", "D) Platinum"], correct: 2 },
+        { q: "What is the pH of pure water?", options: ["A) 5", "B) 6", "C) 7", "D) 8"], correct: 2 },
+        { q: "Which organelle is known as the powerhouse of the cell?", options: ["A) Nucleus", "B) Ribosome", "C) Mitochondria", "D) Golgi body"], correct: 2 },
+        { q: "The earth revolves around the:", options: ["A) Moon", "B) Sun", "C) Mars", "D) Jupiter"], correct: 1 },
+        { q: "Which vitamin is produced by sunlight?", options: ["A) Vitamin A", "B) Vitamin B", "C) Vitamin C", "D) Vitamin D"], correct: 3 },
+        { q: "What is the chemical formula of water?", options: ["A) H2O", "B) CO2", "C) NaCl", "D) H2SO4"], correct: 0 },
+        { q: "The normal human body temperature is about:", options: ["A) 36°C", "B) 37°C", "C) 38°C", "D) 39°C"], correct: 1 },
+        { q: "Which animal is known as the ship of the desert?", options: ["A) Horse", "B) Donkey", "C) Camel", "D) Elephant"], correct: 2 },
+        { q: "What is the main component of the sun?", options: ["A) Nitrogen", "B) Oxygen", "C) Hydrogen", "D) Helium"], correct: 2 },
+        { q: "Which of these is a conductor of electricity?", options: ["A) Wood", "B) Rubber", "C) Iron", "D) Plastic"], correct: 2 },
+        { q: "The ozone layer protects us from:", options: ["A) UV radiation", "B) IR radiation", "C) X-rays", "D) Gamma rays"], correct: 0 },
+        { q: "Which planet is known as the Red Planet?", options: ["A) Venus", "B) Mars", "C) Mercury", "D) Pluto"], correct: 1 },
+        { q: "What is the source of energy for the water cycle?", options: ["A) Wind", "B) Moon", "C) Sun", "D) Earth's core"], correct: 2 },
+        { q: "Which acid is found in the stomach?", options: ["A) Acetic acid", "B) Sulphuric acid", "C) Hydrochloric acid", "D) Citric acid"], correct: 2 },
+        { q: "The study of plants is called:", options: ["A) Zoology", "B) Botany", "C) Ecology", "D) Astronomy"], correct: 1 }
+    ];
+
+    // --- Render all questions dynamically ---
+    const container = document.getElementById('questions-container');
+    questions.forEach((q, index) => {
+        const qDiv = document.createElement('div');
+        qDiv.className = 'question-block';
+        qDiv.id = `qblock-${index}`;
+        const qNum = index + 1;
+        let optionsHtml = '';
+        q.options.forEach((opt, optIndex) => {
+            const letter = String.fromCharCode(65 + optIndex);
+            optionsHtml += `
+                <label id="label-${index}-${optIndex}">
+                    <input type="radio" name="q${qNum}" value="${optIndex}">
+                    ${letter}) ${opt}
+                </label>
+            `;
+        });
+        qDiv.innerHTML = `
+            <div class="question-text">${qNum}. ${q.q}</div>
+            <div class="options">${optionsHtml}</div>
+        `;
+        container.appendChild(qDiv);
+    });
+
+    // --- Submit and Review Logic ---
+    document.getElementById('submitBtn').addEventListener('click', function() {
+        let correctCount = 0;
+        const totalQuestions = questions.length;
+        let allAnswered = true;
+
+        // First, check if all questions are answered
+        for (let i = 0; i < totalQuestions; i++) {
+            const qNum = i + 1;
+            const selected = document.querySelector(`input[name="q${qNum}"]:checked`);
+            if (!selected) {
+                allAnswered = false;
+                break;
+            }
+        }
+
+        if (!allAnswered) {
+            alert('Please answer all 100 questions before submitting.');
+            return;
+        }
+
+        // Disable all radio buttons after submission
+        document.querySelectorAll('#quizForm input[type="radio"]').forEach(input => input.disabled = true);
+
+        // Evaluate each question
+        for (let i = 0; i < totalQuestions; i++) {
+            const qNum = i + 1;
+            const selectedOption = document.querySelector(`input[name="q${qNum}"]:checked`);
+            const selectedValue = parseInt(selectedOption.value);
+            const correctIndex = questions[i].correct;
+            const qBlock = document.getElementById(`qblock-${i}`);
+
+            // Highlight the entire block
+            if (selectedValue === correctIndex) {
+                correctCount++;
+                qBlock.classList.add('correct-highlight');
+            } else {
+                qBlock.classList.add('wrong-highlight');
+            }
+
+            // Highlight the correct answer label and the user's wrong answer (if any)
+            const correctLabel = document.getElementById(`label-${i}-${correctIndex}`);
+            if (correctLabel) correctLabel.classList.add('correct-answer');
+
+            if (selectedValue !== correctIndex) {
+                const wrongLabel = document.getElementById(`label-${i}-${selectedValue}`);
+                if (wrongLabel) wrongLabel.classList.add('wrong-answer');
+            }
+        }
+
+        // Display Score
+        const percentage = Math.round((correctCount / totalQuestions) * 100);
+        const resultArea = document.getElementById('result-area');
+        document.getElementById('scoreDisplay').textContent = correctCount;
+        document.getElementById('percentDisplay').textContent = percentage + '%';
+        resultArea.style.display = 'block';
+        resultArea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        // Change button text
+        this.textContent = '✅ Results Ready - Scroll to Review';
+        this.disabled = true;
+        this.style.opacity = '0.8';
+        this.style.cursor = 'default';
+    });
+</script>
+</body>
+</html>
